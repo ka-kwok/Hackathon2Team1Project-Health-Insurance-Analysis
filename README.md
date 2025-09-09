@@ -15,18 +15,20 @@ It can be used to analyze how these attributes affect medical insurance costs an
 
 
 ## Hypothesis and how to validate?
-* Hypothesis 1 (Smoker Status): We hypothesize that individuals who smoke will have significantly higher insurance charges compared to those who do not smoke. This will be tested as we keep other attributes constant while we compare relationship between smoker status and medical insurance cost.
+
+Hypothesis 1 (Smoker Status): We hypothesize that individuals who smoke will have significantly higher insurance charges compared to those who do not smoke. This will be tested as we keep other attributes constant while we compare relationship between smoker status and medical insurance cost.
 
 Hypothesis 2 (BMI): We hypothesize that there is a positive correlation between an individual's Body Mass Index (BMI) and their insurance charges. This will be tested as we keep other attributes constant while we compare relationship between BMI and medical insurance cost.
 
 Hypothesis 3 (Age): We hypothesize that older individuals will have higher average insurance charges than younger individuals. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
 
-Hypothesis 4 (Region): We hypothesize that geographic region will have less impact than personal attributes (Smoker status, BMI and Age) on medical insurance cost. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
+Hypothesis 4 (Region): We hypothesize that geographic region will have less impact, if any, than personal attributes (Smoker status, BMI and Age) on medical insurance cost. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
 
 Hypothesis 5 (Children): We hypothesize that the number of children an individual has will have an impact on medical insurance cost but will be less than the impact of personal attributes (Smoker status, BMI and Age). This will be tested/validated as we keep other attributes constant while we compare relationship between number of children and medical insurance cost.
 
 
 ## Project Plan
+Kanban board at: https://github.com/users/ka-kwok/projects/7/views/1
 * Outline the high-level steps taken for the analysis.
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
 * Why did you choose the research methodologies you used?
