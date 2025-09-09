@@ -6,15 +6,25 @@
 
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
+* This dataset captures details on personal attributes such as age, gender, BMI, family size and smoking habits as well as geographic factors and their influence on medical insurance charges. 
+It can be used to analyze how these attributes affect medical insurance costs and for building predictive models to estimate healthcare expenses.
 
 
 ## Business Requirements
-* Describe your business requirements
+* To find out which attribute(s) have a larger impact on medical Insurance Cost.
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+* Hypothesis 1 (Smoker Status): We hypothesize that individuals who smoke will have significantly higher insurance charges compared to those who do not smoke. This will be tested as we keep other attributes constant while we compare relationship between smoker status and medical insurance cost.
+
+Hypothesis 2 (BMI): We hypothesize that there is a positive correlation between an individual's Body Mass Index (BMI) and their insurance charges. This will be tested as we keep other attributes constant while we compare relationship between BMI and medical insurance cost.
+
+Hypothesis 3 (Age): We hypothesize that older individuals will have higher average insurance charges than younger individuals. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
+
+Hypothesis 4 (Region): We hypothesize that geographic region will have less impact than personal attributes (Smoker status, BMI and Age) on medical insurance cost. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
+
+Hypothesis 5 (Children): We hypothesize that the number of children an individual has will have an impact on medical insurance cost but will be less than the impact of personal attributes (Smoker status, BMI and Age). This will be tested/validated as we keep other attributes constant while we compare relationship between number of children and medical insurance cost.
+
 
 ## Project Plan
 * Outline the high-level steps taken for the analysis.
