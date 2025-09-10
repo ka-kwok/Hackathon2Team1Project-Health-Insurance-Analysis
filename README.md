@@ -43,27 +43,27 @@ The business requires a predictive model to estimate insurance charges based on 
 
 **Hypothesis 1 (Smoker Status):** We hypothesize that individuals who smoke will have significantly higher insurance charges compared to those who do not smoke. This will be tested as we keep other attributes constant while we compare relationship between smoker status and medical insurance cost.
 
-    * Answer: Modest significant
+    * Answer: Highly significant. This is the largest effect. Being a smoker adds $23,860 to the charges.
     * p-value: 0.0000 (very near to 0)
 
 **Hypothesis 2 (BMI):** We hypothesize that there is a positive correlation between an individual's Body Mass Index (BMI) and their insurance charges. This will be tested as we keep other attributes constant while we compare relationship between BMI and medical insurance cost.
 
-    * Answer: Highly significant
+    * Answer: Highly significant. This is the second largest effect after smoking. Being obese adds $4,742.
     * p-value: 0.0000 (very near to 0, t-tested with obese and non-obese category)
 
 **Hypothesis 3 (Age):** We hypothesize that older individuals will have higher average insurance charges than younger individuals. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
 
-    * Answer: Highly significant
-    * Slope / Age coefficient: 257.72 (Linear Regression) 
+    * Answer: Highly significant. Each additional year of age increases charges by $258.
+    * Slope / Age coefficient: 258
 
 **Hypothesis 4 (Region):** We hypothesize that geographic region will have less impact than personal attributes (Smoker status, BMI and Age) on medical insurance cost. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
 
-    * Answer: Modest significant
+    * Answer: Modest significant. The two southern regions are significantly cheaper than the two northern regions.  
     * p-value: 0.0309 (ANOVA)
 
 **Hypothesis 5 (Children):** We hypothesize that the number of children an individual has will have an impact on medical insurance cost but will be less than the impact of personal attributes (Smoker status, BMI and Age). This will be tested/validated as we keep other attributes constant while we compare relationship between number of children and medical insurance cost.
 
-    * Answer: Small but statistically significant
+    * Answer: Moderate effect, statistically significant. Each additional child increases charges by $476.  
     * p-value: 0.0177 (T-Test)
 
 
