@@ -1,6 +1,6 @@
-# Project XYZ
+# Healthcare Insurance Charge Analysis
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+Healthcare Insurance Charge Analysis is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
@@ -69,9 +69,22 @@ The business requires a predictive model to estimate insurance charges based on 
 
 ## Project Plan
 Kanban board at: https://github.com/users/ka-kwok/projects/7/views/1
-* Outline the high-level steps taken for the analysis.
+
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+
+    * **Collection
+    Dataset sourced from Kaggle, containing demographic, lifestyle, and health variables with medical charges as the target. 
+
+    * **Processing
+    Data Processing Cleaned missing/inconsistent values, standardized data types, and engineered features such as one-hot encoding, log charges, BMI categories and comorbidity flags. 
+
+    * **Analysis
+    Analysis EDA with descriptive statistics and visualizations to explore distributions, trends, and outliers. Statistical Tests: Independent t tests for two group comparisons (e.g., smoker vs. non smoker) and one way ANOVA for multi group comparisons (e.g., BMI categories, regions). Predictive Modeling: Multiple linear regression to estimate charges based on demographic and lifestyle factors. 
+
+    * **Interpretation
+    Interpretation Identified significant factors influencing charges, validated hypotheses with p values, and evaluated model performance using R² and RMSE.
+
+
 
 # Choice of Methodology
 
@@ -82,39 +95,40 @@ Kanban board at: https://github.com/users/ka-kwok/projects/7/views/1
 * **Statistical Testing:** Applied to quantitatively assess the influence of attributes (e.g., smoker status, BMI, age, region, number of children) on insurance charges. Techniques such as T-tests, ANOVA, and regression analysis provide statistical evidence for observed differences and validate hypotheses, ensuring conclusions are robust and data-driven.
 
 
-## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
-
+ 
 ## Analysis techniques used
 * List the data analysis methods used and explain limitations or alternative approaches.
 * How did you structure the data analysis techniques. Justify your response.
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
+        Since categorical variables cannot be directly used by most models, they must be transformed into numerical format using one-hot encoding. Additionally, visualizations of the encoded features are required to understand category distributions and their impact on charges, enabling data-driven decisions in pricing strategy, risk assessment, and market targeting.
+
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
 ## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
+* During analysis, we identified that gender influenced insurance cost predictions, raising concerns of bias and fairness. Using gender as a predictor could perpetuate discriminatory outcomes and was therefore considered ethically inappropriate. From a privacy perspective, we also introduced an ID column, which served only as a unique identifier without containing personal or sensitive information, ensuring compliance with data protection principles.
+
+* The anonymised ID column allowed us to track records without risking disclosure of personal data. These measures aligned our work with ethical standards, promoted fairness in analysis, and ensured that no legal or societal harm was introduced through our approach.
 
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
-* How were data insights communicated to technical and non-technical audiences?
-* Explain how the dashboard was designed to communicate complex data insights to different audiences. 
+* We mocked up a Tableau wireframe with Balsamiq showing where each KPI card, chart, and filter sits on the page so the report has a visual representation of the dashboard layout.
+
+### Wireframe
+* Link: https://github.com/ka-kwok/Hackathon2Team1Project-Health-Insurance-Analysis/blob/main/Dashboard_wireframe.png
 
 ## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+* N/A.
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+* A key challenge encountered was a merge conflict in GitHub, which arose when multiple contributors modified overlapping sections of the codebase. With guidance from our instructor, we reviewed the conflicting files, reconciled the differences manually, and validated the merged version through testing. This process enhanced our understanding of version control and conflict resolution.
+
+* Building on this experience, We aim to develop stronger proficiency in advanced Git workflows, adopt structured branching and collaboration practices, and explore automation tools such as GitHub Actions to streamline integration and testing in future projects.
 
 ## Deployment
 
+
 ### Tableau Dashboards
 
-Link:
+Link: https://public.tableau.com/app/profile/mark.aamodt.leeper/viz/Hackathon2Team1-Health-Insurance/HealthInsuranceDataAnalysisDashboard?publish=yes
 
 
 ## Main Data Analysis Libraries
@@ -130,8 +144,7 @@ Link:
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* We credit the Code Institute LMS platform for code refrences as well as Open AI's Chat gpt for refrences and error handling.
 
 ### Content 
 
@@ -145,6 +158,5 @@ Link:
 - The images used for the gallery page were taken from this other open-source site
 
 
-
 ## Acknowledgements (optional)
-* Thank the people who provided support through this project.
+* We will like to thank of members of our team, Dennis Kwok, Mark Aamodt-Leeper, Jeff Ozule and Jena (who unfortunately had a to leave due to other academic commitments). We will also like to thank the Code Institute team inculding Vasi, Mark and Niel who have been of great help in our quest for knowledge in Data Analytics. 
