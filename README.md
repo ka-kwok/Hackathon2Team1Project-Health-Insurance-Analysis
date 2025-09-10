@@ -11,20 +11,60 @@ It can be used to analyze how these attributes affect medical insurance costs an
 
 
 ## Business Requirements
-* To find out which attribute(s) have a larger impact on medical Insurance Cost.
+The business requires a predictive model to estimate insurance charges based on customer demographics (age, sex, region) and lifestyle factors (smoker). Since categorical variables cannot be directly used by most models, they must be transformed into numerical format using one-hot encoding. Additionally, visualizations of the encoded features are required to understand category distributions and their impact on charges, enabling data-driven decisions in pricing strategy, risk assessment, and market targeting.
+
+* Customer Segmentation
+
+    * Distribution plot shows how customers are spread across sex, smoker, region.
+
+    * Helps insurers identify under/over-represented groups.
+
+* Risk Assessment
+
+    * Average charges per category plot shows which groups drive higher costs (e.g., smokers have higher charges).
+
+    * Insurers can adjust premiums accordingly.
+
+* Market Strategy
+
+    * Regional distribution can reveal where most insured clients are located.
+
+    * Helps allocate sales and marketing resources effectively.
+
+* Fairness & Compliance
+
+    * By examining how categorical groups differ in charges, insurers can ensure pricing models comply with regulations (avoid discrimination while adjusting for risk).
 
 
 ## Hypothesis and how to validate?
 
-Hypothesis 1 (Smoker Status): We hypothesize that individuals who smoke will have significantly higher insurance charges compared to those who do not smoke. This will be tested as we keep other attributes constant while we compare relationship between smoker status and medical insurance cost.
 
-Hypothesis 2 (BMI): We hypothesize that there is a positive correlation between an individual's Body Mass Index (BMI) and their insurance charges. This will be tested as we keep other attributes constant while we compare relationship between BMI and medical insurance cost.
+* With Statistical tests (T-Test and ANOVA) in Data Visualization Jupyter Notebook, we justified our findings with the p-value as below. 
 
-Hypothesis 3 (Age): We hypothesize that older individuals will have higher average insurance charges than younger individuals. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
+**Hypothesis 1 (Smoker Status):** We hypothesize that individuals who smoke will have significantly higher insurance charges compared to those who do not smoke. This will be tested as we keep other attributes constant while we compare relationship between smoker status and medical insurance cost.
 
-Hypothesis 4 (Region): We hypothesize that geographic region will have less impact, if any, than personal attributes (Smoker status, BMI and Age) on medical insurance cost. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
+    * Answer: Modest significant
+    * p-value: 0.0000 (very near to 0)
 
-Hypothesis 5 (Children): We hypothesize that the number of children an individual has will have an impact on medical insurance cost but will be less than the impact of personal attributes (Smoker status, BMI and Age). This will be tested/validated as we keep other attributes constant while we compare relationship between number of children and medical insurance cost.
+**Hypothesis 2 (BMI):** We hypothesize that there is a positive correlation between an individual's Body Mass Index (BMI) and their insurance charges. This will be tested as we keep other attributes constant while we compare relationship between BMI and medical insurance cost.
+
+    * Answer: Highly significant
+    * p-value: 0.0000 (very near to 0, t-tested with obese and non-obese category)
+
+**Hypothesis 3 (Age):** We hypothesize that older individuals will have higher average insurance charges than younger individuals. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
+
+    * Answer: Highly significant
+    * Slope / Age coefficient: 257.72 (Linear Regression) 
+
+**Hypothesis 4 (Region):** We hypothesize that geographic region will have less impact than personal attributes (Smoker status, BMI and Age) on medical insurance cost. This will be tested as we keep other attributes constant while we compare relationship between Age and medical insurance cost.
+
+    * Answer: Modest significant
+    * p-value: 0.0309 (ANOVA)
+
+**Hypothesis 5 (Children):** We hypothesize that the number of children an individual has will have an impact on medical insurance cost but will be less than the impact of personal attributes (Smoker status, BMI and Age). This will be tested/validated as we keep other attributes constant while we compare relationship between number of children and medical insurance cost.
+
+    * Answer: Small but statistically significant
+    * p-value: 0.0177 (T-Test)
 
 
 ## Project Plan
@@ -32,6 +72,15 @@ Kanban board at: https://github.com/users/ka-kwok/projects/7/views/1
 * Outline the high-level steps taken for the analysis.
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
 * Why did you choose the research methodologies you used?
+
+# Choice of Methodology
+
+* **Exploratory Data Analysis (EDA):** Performed to identify patterns, trends, and correlations between personal attributes (such as age, gender, BMI, smoking status, number of children, and region) and the target variable (insurance charges). EDA helps to detect outliers, understand variable distributions, and inform the selection of features for further analysis.
+
+* **Visualization (Boxplots, Scatterplots, Heatmaps):** Utilized to visually represent relationships between key attributes and insurance charges. These visual tools help to clarify the impact of factors like smoking status, BMI, and age on costs, making complex data more accessible for stakeholders.
+
+* **Statistical Testing:** Applied to quantitatively assess the influence of attributes (e.g., smoker status, BMI, age, region, number of children) on insurance charges. Techniques such as T-tests, ANOVA, and regression analysis provide statistical evidence for observed differences and validate hypotheses, ensuring conclusions are robust and data-driven.
+
 
 ## The rationale to map the business requirements to the Data Visualisations
 * List your business requirements and a rationale to map them to the Data Visualisations
@@ -62,22 +111,21 @@ Kanban board at: https://github.com/users/ka-kwok/projects/7/views/1
 * What new skills or tools do you plan to learn next based on your project experience? 
 
 ## Deployment
-### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+### Tableau Dashboards
 
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+Link:
 
 
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+* NumPy
+* Pandas
+* Matplotlib
+* Seaborn
+* Plotly
+* Scipy
+* Sklearn
+* Tableau
 
 
 ## Credits 
