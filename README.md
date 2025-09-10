@@ -11,7 +11,7 @@ It can be used to analyze how these attributes affect medical insurance costs an
 
 
 ## Business Requirements
-The business requires a predictive model to estimate insurance charges based on customer demographics (age, sex, region) and lifestyle factors (smoker). Since categorical variables cannot be directly used by most models, they must be transformed into numerical format using one-hot encoding. Additionally, visualizations of the encoded features are required to understand category distributions and their impact on charges, enabling data-driven decisions in pricing strategy, risk assessment, and market targeting.
+The business requires a predictive model to estimate insurance charges based on customer demographics (age, sex, region) and lifestyle factors (smoker,bmi). The business needs to understand the factors that drive the insurance charges.Additionally, visualizations will help the business to understand category distributions and their impact on charges, enabling data-driven decisions in pricing strategy, risk assessment, and market targeting.
 
 * Customer Segmentation
 
@@ -39,7 +39,7 @@ The business requires a predictive model to estimate insurance charges based on 
 ## Hypothesis and how to validate?
 
 
-* With Statistical tests (T-Test and ANOVA) in Data Visualization Jupyter Notebook, we justified our findings with the p-value as below. 
+With Statistical tests (T-Test and ANOVA) in Data Visualization Jupyter Notebook, we justified our findings with the p-value as below. 
 
 **Hypothesis 1 (Smoker Status):** We hypothesize that individuals who smoke will have significantly higher insurance charges compared to those who do not smoke. This will be tested as we keep other attributes constant while we compare relationship between smoker status and medical insurance cost.
 
@@ -72,16 +72,16 @@ Kanban board at: https://github.com/users/ka-kwok/projects/7/views/1
 
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
 
-    * **Collection
+    * **Collection**
     Dataset sourced from Kaggle, containing demographic, lifestyle, and health variables with medical charges as the target. 
 
-    * **Processing
+    * **Processing**
     Data Processing Cleaned missing/inconsistent values, standardized data types, and engineered features such as one-hot encoding, log charges, BMI categories and comorbidity flags. 
 
-    * **Analysis
+    * **Analysis**
     Analysis EDA with descriptive statistics and visualizations to explore distributions, trends, and outliers. Statistical Tests: Independent t tests for two group comparisons (e.g., smoker vs. non smoker) and one way ANOVA for multi group comparisons (e.g., BMI categories, regions). Predictive Modeling: Multiple linear regression to estimate charges based on demographic and lifestyle factors. 
 
-    * **Interpretation
+    * **Interpretation**
     Interpretation Identified significant factors influencing charges, validated hypotheses with p values, and evaluated model performance using R² and RMSE.
 
 
@@ -97,12 +97,11 @@ Kanban board at: https://github.com/users/ka-kwok/projects/7/views/1
 
  
 ## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
-        Since categorical variables cannot be directly used by most models, they must be transformed into numerical format using one-hot encoding. Additionally, visualizations of the encoded features are required to understand category distributions and their impact on charges, enabling data-driven decisions in pricing strategy, risk assessment, and market targeting.
+    * Since categorical variables cannot be directly used by most models, they must be transformed into numerical format using one-hot encoding. Additionally, visualizations of the encoded features are required to understand category distributions and their impact on charges, enabling data-driven decisions in pricing strategy, risk assessment, and market targeting.
 
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+    * We used co-pilot in VS-code to help for coding and debugging. We also used co-pilot for ideation for business requirement with a persona interview. 
 
 ## Ethical considerations
 * During analysis, we identified that gender influenced insurance cost predictions, raising concerns of bias and fairness. Using gender as a predictor could perpetuate discriminatory outcomes and was therefore considered ethically inappropriate. From a privacy perspective, we also introduced an ID column, which served only as a unique identifier without containing personal or sensitive information, ensuring compliance with data protection principles.
@@ -113,7 +112,13 @@ Kanban board at: https://github.com/users/ka-kwok/projects/7/views/1
 * We mocked up a Tableau wireframe with Balsamiq showing where each KPI card, chart, and filter sits on the page so the report has a visual representation of the dashboard layout.
 
 ### Wireframe
+
+![Wireframe](/Dashboard_wireframe.png)
+
+
 * Link: https://github.com/ka-kwok/Hackathon2Team1Project-Health-Insurance-Analysis/blob/main/Dashboard_wireframe.png
+
+
 
 ## Unfixed Bugs
 * N/A.
@@ -123,10 +128,13 @@ Kanban board at: https://github.com/users/ka-kwok/projects/7/views/1
 
 * Building on this experience, We aim to develop stronger proficiency in advanced Git workflows, adopt structured branching and collaboration practices, and explore automation tools such as GitHub Actions to streamline integration and testing in future projects.
 
+* After conducting multiple trials and tests, we discovered that the cost estimator calculator began malfunctioning following recent code modifications. We resolved the issue by reviewing the recent code changes, identifying the faulty logic, and restoring the correct calculation method. Additional unit tests were implemented to ensure the calculator now functions as intended and to prevent similar errors in the future.
+
 ## Deployment
 
 
 ### Tableau Dashboards
+[View the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/mark.aamodt.leeper/viz/Hackathon2Team1-Health-Insurance/HealthInsuranceDataAnalysisDashboard?publish=yes)
 
 Link: https://public.tableau.com/app/profile/mark.aamodt.leeper/viz/Hackathon2Team1-Health-Insurance/HealthInsuranceDataAnalysisDashboard?publish=yes
 
@@ -137,26 +145,15 @@ Link: https://public.tableau.com/app/profile/mark.aamodt.leeper/viz/Hackathon2Te
 * Matplotlib
 * Seaborn
 * Plotly
-* Scipy
-* Sklearn
+* SciPy
+* Scikit-learn
 * Tableau
 
 
 ## Credits 
 
-* We credit the Code Institute LMS platform for code refrences as well as Open AI's Chat gpt for refrences and error handling.
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
+* We credit the Code Institute LMS platform for code references as well as Microsoft co-pilot for ideation, coding support and error handling.
 
 
-## Acknowledgements (optional)
-* We will like to thank of members of our team, Dennis Kwok, Mark Aamodt-Leeper, Jeff Ozule and Jena (who unfortunately had a to leave due to other academic commitments). We will also like to thank the Code Institute team inculding Vasi, Mark and Niel who have been of great help in our quest for knowledge in Data Analytics. 
+## Acknowledgements
+* We will like to thank of members of our team, Dennis Kwok, Mark Aamodt-Leeper, Jeff Ozule and Jena (who unfortunately had a to leave due to other academic commitments). We will also like to thank the Code Institute team inculding Vasi, Roman, Mark and Niel who have been of great help in our quest for knowledge in Data Analytics. 
