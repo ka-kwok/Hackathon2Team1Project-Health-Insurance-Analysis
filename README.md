@@ -38,6 +38,7 @@ The business requires a predictive model to estimate insurance charges based on 
 
 ## Hypothesis and how to validate?
 
+
 * With Statistical tests (T-Test and ANOVA) in Data Visualization Jupyter Notebook, we justified our findings with the p-value as below. 
 
 **Hypothesis 1 (Smoker Status):** We hypothesize that individuals who smoke will have significantly higher insurance charges compared to those who do not smoke. This will be tested as we keep other attributes constant while we compare relationship between smoker status and medical insurance cost.
